@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumno Registro</title>
+</head>
+<body>
+    <h1>Alumno Registro</h1>
+    <div class="container">
+        <form action="#" th:action="@{alumnoRegistro}" th:object="${alumno}" method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text" th:field="*{nombre}" id="nombre">
+        <br><br><br><br>
+
+        <label for="apellido">Apellido</label>
+        <input type="text" th:field="*{apellido}" id="apellido">
+        <br><br><br><br>
+
+        <label for="optativa">Elegi una optativa</label>
+        <select name="optativa" id="optativa">
+            <option value="Matematicas">Matematicas</option>
+            <option value="Geografia">Geografia</option>
+            <option value="Fisica">Fisica</option>
+            <option value="Quimica">Quimica</option>
+        </select>
+
+        <br><br>
+        
+        <label for="sede">Elegi la sede</label> <br>
+
+        <input type="radio" name="sede" id="sede" value="Pergamino">
+        <label for="Pergamino">Pergamino</label><br>
+
+        <input type="radio" name="sede" id="sede" value="Junin">
+        <label for="Junin">Junin</label><br>
+
+        <input type="radio" name="sede" id="sede" value="Rojas">
+        <label for="Rojas">Rojas</label><br>
+
+        <label for="extranjero">Extranjero?</label>
+        <input type="checkbox" th:field="*{extranjero}" id="extranjero"><br><br>
+        
+        <label for="idioma">Elegi el idioma que hablas</label><br>
+
+        <input type="checkbox" th:field="*{idioma}" id="idioma" value="ingles">
+        <label for="ingles">ingles</label>
+
+        <input type="checkbox" th:field="*{idioma}" id="idioma" value="español">
+        <label for="español">español</label>
+
+        <input type="checkbox" th:field="*{idioma}" id="idioma" value="frances"> 
+        <label for="frances">frances</label>
+        
+        <input type="submit" value="Registrar">
+    </form>
+    </div>
+</body>
+</html>

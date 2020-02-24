@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/hola.css}" href="../static/css/hola.css">
+    <title>Hola</title>
+</head>
+<body>
+    <h1>Bienvenido</h1>
+    <h1 th:text="${alumno.nombre}"></h1>
+    <h1 th:text="${alumno.apellido}"></h1>
+    <h1 th:text="${alumno.optativa}"></h1>
+    <h1 th:text="${alumno.sede}"></h1>
+    <h1 th:text="${alumno.idioma}"></h1>
+</body>
+</html>
