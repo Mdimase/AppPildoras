@@ -10,12 +10,29 @@
     <div class="container">
         <form action="#" th:action="@{alumnoRegistro}" th:object="${alumno}" method="POST">
         <label for="nombre">Nombre</label>
-        <input type="text" th:field="*{nombre}" id="nombre">
+        <input type="text" th:field="*{nombre}" id="nombre" required>
+        <span th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></span>  <!--aca muestro el msg error de la clase alumno-->
         <br><br><br><br>
 
         <label for="apellido">Apellido</label>
-        <input type="text" th:field="*{apellido}" id="apellido">
+        <input type="text" th:field="*{apellido}" id="apellido" required>
+        <span th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}"></span>
         <br><br><br><br>
+
+        <label for="edad">Edad</label>
+        <input type="number" th:field="*{edad}" id="edad" required>
+        <span th:if="${#fields.hasErrors('edad')}" th:errors="*{edad}"></span>  <!--aca muestro el msg error de la clase alumno-->
+        <br><br>
+
+        <label for="email">E-mail</label>
+        <input type="email" th:field="*{email}" id="email" required>
+        <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>  <!--aca muestro el msg error de la clase alumno-->
+        <br><br>
+
+        <label for="codigoPostal">Codigo Postal</label>
+        <input type="text" th:field="*{codigoPostal}" id="codigoPostal" required>
+        <span th:if="${#fields.hasErrors('codigoPostal')}" th:errors="*{codigoPostal}"></span>  <!--aca muestro el msg error de la clase alumno-->
+        <br><br>
 
         <label for="optativa">Elegi una optativa</label>
         <select name="optativa" id="optativa">
