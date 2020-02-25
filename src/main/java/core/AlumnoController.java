@@ -53,6 +53,16 @@ public class AlumnoController {
 		if(result.hasErrors()) {
 			return "alumnoRegistro";
 		}else {
+			if(alumno.getIdioma() == null|| alumno.getSede() == null) {
+				alumno.setApellido(null);
+				alumno.setNombre(null);
+				alumno.setEmail(null);
+				alumno.setIdioma(null);
+				alumno.setOptativa(null);
+				alumno.setEdad(0);
+				alumno.setCodigoPostal(null);
+				alumno.setSede(null);
+				return "alumnoRegistro";}
 			return "bienvenidoAlumno";
 		}
 		
